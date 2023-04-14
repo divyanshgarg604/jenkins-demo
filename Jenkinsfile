@@ -1,25 +1,21 @@
 pipeline {
     agent any
+
     stages {
-        stage('git repo & clean') {
+        stage('Build') {
             steps {
-                bat "git clone https://github.com/divyanshgarg604/jenkins-demo.git"
+                echo 'Hello World'
             }
         }
-//         stage('install') {
-//             steps {
-//                 bat "mvn install -f TicketBookingServiceJunitTesting"
-//             }
-//         }
-//         stage('test') {
-//             steps {
-//                 bat "mvn test -f TicketBookingServiceJunitTesting"
-//             }
-//         }
-//         stage('package') {
-//             steps {
-//                 bat "mvn package -f TicketBookingServiceJunitTesting"
-//             }
-//         }
+        stage('Test') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Hello World'
+            }
+        }
     }
 }
